@@ -4,6 +4,11 @@ fun main(args: Array<String>) {
     println(m1 + m2)
     println(m1 * m2)
 
+    var a: Int = 0
+    var b: Int = 100
+    println("++a = ${++a}, b-- = ${b--}")
+    println("++a = ${++a}, b-- = ${b--}")
+
 }
 
 data class Score(val a: Int, val b: Int) {
@@ -16,4 +21,9 @@ data class Score(val a: Int, val b: Int) {
 
 operator fun Score.times(other: Score): Score {
     return Score(a * other.a, b * other.b)
+}
+
+operator fun Score.unaryMinus(): Score {
+    return Score(-a, -b)
+
 }
