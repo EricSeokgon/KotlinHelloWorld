@@ -1,8 +1,17 @@
 fun main(args: Array<String>) {
-    val b: String = "코틀린을 배우자"
-    if (b is String) {
-        println("String 타입임")
+
+    open class A {}
+    class B : A() {}
+
+    val x = B()
+    if (x is A) {
+        println("A 타입임")
     } else {
-        println("String 타입이 아님")
+        println("A 타입이 아님")
+    }
+    if (x is B) {
+        println("B 타입임")
+    } else {
+        println("B 타입이 아님")
     }
 }
