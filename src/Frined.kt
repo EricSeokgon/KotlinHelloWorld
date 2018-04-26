@@ -1,16 +1,16 @@
-class Frined(var name: String, var tel: String, var type: Int = 4) {
-    init {
-        this.type = if (type < 4) type else 4 // 1:"학교", 2:"회사", 3:"SNS", 4:"기타"
+class Frined {
+    var name: String
+    var tel: String
+    var type: Int
+
+    constructor(name: String) : this(name, " ", 4) {
     }
-}
 
-fun main(args: Array<String>) {
-    val frined1 = Frined("홍길동", "010-1234-5678")
-    println(frined1.type)
+    constructor(name: String, tel: String = " ", type: Int = 4) {
+        this.name = name
+        this.tel = tel
+        this.type = if (type < 4) type else 4
+    }
 
-    val frined2 = Frined("깁성달", "010-2345-6788", 3)
-    println(frined2.type)
 
-    val frined3 = Frined("깁성달", "010-2345-6788", 5)
-    println(frined2.type)
 }
