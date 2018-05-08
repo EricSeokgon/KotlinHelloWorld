@@ -1,7 +1,7 @@
 import javax.print.attribute.standard.MediaSize
 
 fun main(args: Array<String>) {
-    val c1 = Child.("검정", "검정", "기타")
+    val c1 = Child("검정", "검정", "기타")
     c1.printHairColor()
 
     c1.changeHairColor("파랑")
@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
 
 }
 
-open class Father(open var hairColor: String, open var sysColor: String) {
+open class Father(open var hairColor: String, open var eyeColor: String) {
     open fun changeHairColor(hairColor: String) {
         this.hairColor = hairColor
     }
@@ -24,7 +24,7 @@ class Child : Father {
     override var eyeColor: String
     var others: String
 
-    constructor(hairColor: String, sysColor: String, others: String) : super(hairColor, eyeColor) {
+    constructor(hairColor: String, eyeColor: String, others: String) : super(hairColor, eyeColor) {
         this.hairColor = hairColor
         this.eyeColor = eyeColor
         this.others = others
@@ -34,7 +34,7 @@ class Child : Father {
         this.hairColor = hairColor
     }
 
-    fun paintHairColor() {
+    fun printHairColor() {
         println("Child 모발색은 ${this.hairColor} 입니다.")
 
     }
