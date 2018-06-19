@@ -17,3 +17,5 @@ val sum3_3: (Int, Int) -> Int = fun(x, y) = x + y
 val sum4_1 = fun(x: Int, y: Int): Int { return x + y }
 val sum4_2 = fun(x: Int, y: Int) = x + y
 
+// 람다식으로 정의된 함수 #1(함수 타입이 지정됨)
+val sum5: (Int, Int) -> Int = { x, y -> x + y }
