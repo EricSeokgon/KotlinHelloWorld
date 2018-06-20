@@ -22,3 +22,8 @@ val sum5: (Int, Int) -> Int = { x, y -> x + y }
 
 //람다식으로 정의된 함수 #2(함수 타입이 생략됨)
 val sum6 = { a: Int, b: Int -> a + b }
+
+//람다식에서 여러 개의 표현식을 한줄에 작성할 때는 중간에 세미콜론(;)을 넣어야 한다
+//또한, 람다식에 여러 개의 표현식이 있을 때는 마지막 표현식의 결과가 반환값이 된다.
+val sum7_1 = { a: Int, b: Int -> println(a + b);a + b }
+val sum7_2 = { a: Int, b: Int -> a + b; println(a + b) }
