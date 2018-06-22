@@ -27,3 +27,26 @@ val sum6 = { a: Int, b: Int -> a + b }
 //또한, 람다식에 여러 개의 표현식이 있을 때는 마지막 표현식의 결과가 반환값이 된다.
 val sum7_1 = { a: Int, b: Int -> println(a + b);a + b }
 val sum7_2 = { a: Int, b: Int -> a + b; println(a + b) }
+
+fun main(args: Array<String>) {
+    println("합계는 ${sum1(10, 20)}입니다.")
+
+    println("합계는 ${sum2_1(10, 20)}입니다.")
+    println("합계는 ${sum2_2(10, 20)}입니다.")
+
+    println("합계는 ${sum3_1(10, 20)}입니다.")
+    println("합계는 ${sum3_2(10, 20)}입니다.")
+    println("합계는 ${sum3_3(10, 20)}입니다.")
+
+    println("합계는 ${sum4_1(10, 20)}입니다.")
+    println("합계는 ${sum4_2(10, 20)}입니다.")
+
+    println("합계는 ${sum5(10, 20)}입니다.")
+
+    println("합계는 ${sum6(10, 20)}입니다.")
+
+    println("합계는 ${sum7_1(10, 20)}입니다.")
+    println("합계는 ${sum7_2(10, 20)}입니다.")
+
+
+}
