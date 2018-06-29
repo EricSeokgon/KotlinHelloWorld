@@ -75,9 +75,29 @@ fun main(args: Array<String>) {
     var mp = mapOf(Pair("1", "하나"), Pair("2", "둘"), Pair("3", "셋"), Pair("4", "넷"))  //#19
     println("mapOf: $mp")
 
+    val mt = mutableMapOf("1" to "하나", "2" to "둘", "3" to "셋", "4" to "넷")  //#20
+    mt.remove("4")
+    println("mutableMapOf: $mt")
 
-    val mt = mutableMapOf("1" to "하나", "2" to "둘", "3" to "셋", "4" to "넷")
+    val hm = hashMapOf("1" to "하나", "2" to "둘", "3" to "셋", "4" to "넷")  //#21
+    hm.remove("4")
+    println("hashMapOf: $hm")
 
+    val lm = linkedMapOf(Pair("1", "하나"), Pair("2", "둘"), Pair("3", "셋"), Pair("4", "넷"))  //#22
+    lm.remove("4")
+    println("linkedMapOf: $lm")
+
+    var sm = sortedMapOf(Pair("1", "하나"), Pair("2", "둘"), Pair("3", "셋"), Pair("4", "넷"))  //#23
+    sm.remove("4")
+    println("sortedMapOf: $sm")
+
+    var hsm = HashMap(mp)  //#24
+    hsm.remove("4")
+    println("HashMap: $hsm")
+
+    var lhm = LinkedHashMap(mp)  //#25
+    lhm.remove("4")
+    println("LinkedHashMap: $lhm")
 
 
 }
